@@ -9,11 +9,10 @@ use App\Models\Post;
 class PostController extends Controller
 {
     public function index(){
-        return response()->json([
-            $posts = Post::all();
 
-            return response()->json($posts)
-        ])
+        $posts = Post::all();
+
+        return response()->json($posts);
     }
     public function show(Post $post){
 
